@@ -5,6 +5,13 @@
     <title>Ahmet Aziz Uyar - Web Projesi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Fotoğrafların boyutlarını sabitlemek ve sliderın bozulmaması için */
+        .carousel-item img {
+            height: 450px;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body class="container">
 
@@ -12,7 +19,7 @@
         <h1>Ahmet Aziz Uyar</h1>
     </header>
 
-    <!-- HAKKINDA VE CV KISIMLARI   -->
+    <!-- HAKKINDA BÖLÜMÜ -->
     <section id="hakkimda" class="py-5">
         <h2>Hakkımda</h2>
         <p>Merhaba, ben Ahmet Aziz Uyar. Sakarya Üniversitesi Bilgisayar Mühendisliği bölümünde 1. sınıf öğrencisiyim.</p>
@@ -31,62 +38,59 @@
             <div class="row">
                 <div class="col-md-6">
                     <h2>Şehrim: Sakarya</h2>
-                    <p><strong>Doğup büyüdüğüm ve şu anda yaşadığım şehir Sakarya;</strong> 1.100.000+ nüfusuyla Marmara Bölgesi'nin en aktif şehirlerinden biridir. Son yıllarda yoğun göç alan şehir, büyük organize sanayi bölgeleriyle,
-                         Toyota, Otokar, Türk traktör gibi köklü firmalara sahip olan  tam bir sanayi şehridir.</p>
-                    
-                    <p>Şehir; Manav, Boşnak, Çerkes, Ahıska Türkleri, Balkan ve Karadeniz muhacirleri gibi birçok farklı kökenden insanın bir arada yaşadığı yerlerden biridir.</p>
-                    
-                    <p>Sanayinin yanında tarım da önemli bir yere sahiptir . Sakarya, Türkiye fındık üretiminde 3. sırada yer alarak ülke ekonomisine büyük katkı sağlar. Köylerde yaşayan halk ağırlıklı olarak <strong>fındık ve ceviz</strong> üretimiyle uğraşarak tarıma büyük katkı sağlar.</p>
+                    <p><strong>Doğup büyüdüğüm ve şu anda yaşadığım şehir Sakarya;</strong> 1.100.000'den fazla nüfusuyla Marmara Bölgesi'nin en aktif şehirlerinden biridir. Son yıllarda yoğun göç alan şehrimiz, Toyota ve Otokar gibi büyük fabrikalara ev sahipliği yapan tam bir sanayi şehridir.</p>
+                    <p>Şehir; Manav, Boşnak, Çerkes, Ahıska Türkleri, Balkan ve Karadeniz muhacirleri gibi birçok farklı kökenden insanın huzurla yaşadığı yerlerden biridir.</p>
+                    <p>Sanayinin yanında tarım da önemlidir. Sakarya, Türkiye fındık üretiminde 3. sırada yer alır. Köylerde yaşayan halkın çoğu fındık ve ceviz üretimiyle uğraşmaktadır.</p>
                     
                     <h4>Gezilecek Yerler</h4>
                     <ul>
-                        <li><strong>Sapanca Gölü:</strong> Şehrin en bilinen yeridir, göl kenarında yürüyüş yapmak ve vakit geçirmek için çok tercih edilir.</li>
-                        <li><strong>Maden Deresi:</strong> Kocaali ve Karasu tarafında bulunan, doğası ve şelalesiyle piknik yapmak isteyenlerin gittiği bir yerdir.</li>
-                        <li><strong>Taraklı Evleri:</strong> Eski Osmanlı evlerinin olduğu, tarihi dokusu bozulmamış sakin bir ilçemizdir.</li>
-                        <li><strong>Meşhur Yaylalar (Keremali ve Karagöl Yaylası):</strong> Yazın serin havası ve doğasıyla kamp yapmak veya kafa dinlemek için gidilen en meşhur yaylalarımızdır.</li>
+                        <li><strong>Sapanca Gölü:</strong> Göl kenarında yürüyüş yapmak ve vakit geçirmek için çok tercih edilir.</li>
+                        <li><strong>Maden Deresi:</strong> Doğası ve şelalesiyle piknik yapmak isteyenlerin gittiği bir yerdir.</li>
+                        <li><strong>Taraklı Evleri:</strong> Osmanlı evlerinin olduğu, tarihi dokusu bozulmamış sakin bir ilçedir.</li>
+                        <li><strong>Yaylalar:</strong> Keremali ve Karagöl gibi yaylalar doğa severlerin gözde adresidir.</li>
                     </ul>
                 </div>
 
-        
-
-            <!-- SLIDER (CAROUSEL) KISMI -->
-            <div class="col-md-6">
-                <div id="sakaryaSlider" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner shadow rounded">
-                        <!-- 1. Resim -->
-                        <div class="carousel-item active">
-                            <img src="https://via.placeholder.com/600x400?text=Sapanca+Golu" class="d-block w-100" alt="Sapanca Gölü">
+                <!-- SLIDER (CAROUSEL) KISMI -->
+                <div class="col-md-6">
+                    <div id="sakaryaSlider" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner shadow rounded">
+                            <div class="carousel-item active">
+                                <img src="img/sapanca.jpg" class="d-block w-100" alt="Sapanca Gölü">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/madend.jpg" class="d-block w-100" alt="Maden Deresi">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/taraklı.jpg" class="d-block w-100" alt="Taraklı Evleri">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/karagol.jpg" class="d-block w-100" alt="Karagöl Yaylası">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/keremali.jpg" class="d-block w-100" alt="Keremali Yaylası">
+                            </div>
                         </div>
-                        <!-- 2. Resim -->
-                        <div class="carousel-item">
-                            <img src="https://via.placeholder.com/600x400?text=Maden+Deresi" class="d-block w-100" alt="Maden Deresi">
-                        </div>
-                        <!-- 3. Resim -->
-                        <div class="carousel-item">
-                            <img src="https://via.placeholder.com/600x400?text=Tarakli+Evleri" class="d-block w-100" alt="Taraklı Evleri">
-                        </div>
-                        <!-- 4. Resim -->
-                        <div class="carousel-item">
-                            <img src="https://via.placeholder.com/600x400?text=Sakarya+Yaylalari" class="d-block w-100" alt="Yaylalar">
-                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#sakaryaSlider" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#sakaryaSlider" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
                     </div>
-                    <!-- Slider Kontrolleri -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#sakaryaSlider" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#sakaryaSlider" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="ozgecmis" class="py-5 border-top">
+  
+
+    <!-- ÖZGEÇMİŞ BÖLÜMÜ -->
+    <section id="ozgecmis" class="py-5 border-top bg-light">
         <h2>Özgeçmiş (CV)</h2>
         <article class="mb-4">
             <h4>Eğitim Bilgilerim</h4>
-            <p><strong>Üniversite:</strong> Sakarya Üniversitesi, Bilgisayar Mühendisliği (2025 - Devam Ediyor)[cite: 1]</p>
+            <p><strong>Üniversite:</strong> Sakarya Üniversitesi, Bilgisayar Mühendisliği (2025 - Devam Ediyor)</p>
             <p><strong>Hazırlık:</strong> İngilizce Hazırlık Eğitimi (2024 - 2025)</p>
             <p><strong>Lise:</strong> Adapazarı Anadolu İmam Hatip Lisesi (2024 Mezunu)</p>
             <p><strong>Ortaokul:</strong> Şehit Bülent Yurtseven İmam Hatip Ortaokulu (2020 Mezunu)</p>

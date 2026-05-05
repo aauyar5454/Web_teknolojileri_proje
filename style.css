@@ -1,0 +1,34 @@
+
+
+/* Sayfa genel arka planı ve yazı tipi */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Bölümlerin (Hakkımda, Şehrim vb.) tasarımı */
+section {
+    background: #ffffff;
+    padding: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Slider (Carousel) resim boyutlarını sabitleme */
+.carousel-item img {
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Başlıkların altındaki çizgiler için tasarım  */
+h2 {
+    color: #0d6efd;
+    border-bottom: 2px solid #0d6efd;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+}

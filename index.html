@@ -31,7 +31,7 @@
     <!-- Yaşadığım şehir Sakarya hakkında bilgiler -->
     <section id="sehrim" class="py-5 border-top bg-light">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-start">
                 <div class="col-md-6">
                     <h2>Şehrim: Sakarya</h2>
                     <p><strong>Doğup büyüdüğüm ve şu anda yaşadığım şehir Sakarya;</strong> 1.100.000'den fazla nüfusuyla Marmara Bölgesi'nin en aktif şehirlerinden biridir. Son yıllarda yoğun göç alan şehrimiz, Toyota ve Otokar gibi büyük fabrikalara ev sahipliği yapan tam bir sanayi şehridir.</p>
@@ -41,37 +41,64 @@
                     <h4>Gezilecek Yerler</h4>
                     <ul>
                         <li><strong>Sapanca Gölü:</strong> Göl kenarında yürüyüş yapmak ve vakit geçirmek için çok tercih edilir.</li>
-                        <li><strong>Maden Deresi:</strong> Doğası ve şelalesiyle piknik yapmak isteyenlerin gittiği bir yerdir.</li>
-                        <li><strong>Taraklı Evleri:</strong> Osmanlı evlerinin olduğu, tarihi dokusu bozulmamış sakin bir ilçedir.</li>
-                        <li><strong>Yaylalar:</strong> Keremali ve Karagöl gibi yaylalar doğa severlerin gözde adresidir.</li>
+                        <li><strong>Maden Deresi:</strong> İçindeki şelalesi ve yemyeşil doğasıyla hem yürüyüş yapmak hem de kafa dinlemek için harika bir yerdir.</li>
+                        <li><strong>Acarlar Longozu:</strong> Türkiye'nin en büyük subasar ormanı; nilüferleri ve yaban hayatıyla ünlü doğal koruma alanıdır.</li>
+                        <li><strong>Yaylalar:</strong> Keremali ve Karagöl gibi yaylalar, özellikle yaz aylarında serin havası ve bulutların üzerindeki manzarasıyla doğaseverlerin vazgeçilmezidir.</li>
                     </ul>
                 </div>
 
                 <!-- Şehir görselleri için slider -->
-                <div class="col-md-6">
+                <div class="col-md-6 mt-4">
                     <div id="sakaryaSlider" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner shadow rounded">
+                        <div class="carousel-inner shadow rounded bg-white">
+                            
+                            <!-- Sapanca Gölü -->
                             <div class="carousel-item active">
-                                <img src="img/sapanca.jpg" class="d-block w-100" alt="Sapanca Gölü">
+                                <div class="text-center py-2">
+                                    <h5 class="m-0 text-primary">Sapanca Gölü</h5>
+                                </div>
+                                <img src="img/sapanca.jpg" class="d-block w-100 rounded-bottom" alt="Sapanca Gölü">
                             </div>
+
+                            <!-- Maden Deresi -->
                             <div class="carousel-item">
-                                <img src="img/madend.jpg" class="d-block w-100" alt="Maden Deresi">
+                                <div class="text-center py-2">
+                                    <h5 class="m-0 text-primary">Maden Deresi</h5>
+                                </div>
+                                <img src="img/madend.jpg" class="d-block w-100 rounded-bottom" alt="Maden Deresi">
                             </div>
+
+                            <!-- Acarlar Longozu -->
                             <div class="carousel-item">
-                                <img src="img/taraklı.jpg" class="d-block w-100" alt="Taraklı Evleri">
+                                <div class="text-center py-2">
+                                    <h5 class="m-0 text-primary">Acarlar Longozu</h5>
+                                </div>
+                                <img src="img/acarlar_longozu.jpg" class="d-block w-100 rounded-bottom" alt="Acarlar Longozu">
                             </div>
+
+                            <!-- Karagöl Yaylası -->
                             <div class="carousel-item">
-                                <img src="img/karagol.jpg" class="d-block w-100" alt="Karagöl Yaylası">
+                                <div class="text-center py-2">
+                                    <h5 class="m-0 text-primary">Karagöl Yaylası</h5>
+                                </div>
+                                <img src="img/karagol.jpg" class="d-block w-100 rounded-bottom" alt="Karagöl Yaylası">
                             </div>
+
+                            <!-- Keremali Yaylası -->
                             <div class="carousel-item">
-                                <img src="img/keremali.jpg" class="d-block w-100" alt="Keremali Yaylası">
+                                <div class="text-center py-2">
+                                    <h5 class="m-0 text-primary">Keremali Yaylası</h5>
+                                </div>
+                                <img src="img/keremali.jpg" class="d-block w-100 rounded-bottom" alt="Keremali Yaylası">
                             </div>
                         </div>
+
+                        <!-- Slider Butonları -->
                         <button class="carousel-control-prev" type="button" data-bs-target="#sakaryaSlider" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
+                            <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#sakaryaSlider" data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
+                            <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
                         </button>
                     </div>
                 </div>
@@ -79,37 +106,44 @@
         </div>
     </section>
 
-<!-- Şehrimizin kültürel mirası ve tarihi yerleri -->
-<section id="mirasimiz" class="py-5 border-top">
-    <h2>Kültürel Miraslarımız</h2>
-    <div class="row g-4">
-        <!-- Justinianus Köprüsü -->
-        <div class="col-md-6">
-            <div class="card h-100 shadow-sm border-0">
-                <div class="card-body">
-                    <h5 class="card-title text-primary">Justinianus Köprüsü (Beşköprü)</h5>
-                    <p class="card-text">Bizans İmparatoru Justinianus tarafından MS 558-560 yıllarında inşa ettirilen bu devasa köprü, UNESCO Dünya Mirası Geçici Listesi'nde yer almaktadır. 430 metre uzunluğuyla dönemin mühendislik harikalarından biri olarak kabul edilir.</p>
-                </div>
-                <div class="card-footer bg-transparent border-0">
-                    <small class="text-muted">Konum: Serdivan/Adapazarı</small>
+    <!-- Şehrimizin kültürel mirası ve tarihi yerleri -->
+    <section id="mirasimiz" class="py-5 border-top">
+        <h2>Kültürel Miraslarımız</h2>
+        <div class="row g-4">
+            <!-- Justinianus Köprüsü -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="img/bes_kopru.jpg" class="card-img-top" alt="Justinianus Köprüsü">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Justinianus Köprüsü (Beşköprü)</h5>
+                        <p class="card-text">Bizans İmparatoru Justinianus tarafından MS 558-560 yıllarında inşa ettirilen bu devasa köprü, UNESCO Dünya Mirası Geçici Listesi'nde yer almaktadır. 430 metre uzunluğuyla dönemin mühendislik harikalarından biri olarak kabul edilir.</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Sakarya Müzesi -->
-        <div class="col-md-6">
-            <div class="card h-100 shadow-sm border-0">
-                <div class="card-body">
-                    <h5 class="card-title text-primary">Sakarya Müzesi (Atatürk Evi)</h5>
-                    <p class="card-text">1910 yılında inşa edilen bu tarihi konak, Kurtuluş Savaşı sırasında Atatürk'ün annesiyle konakladığı yerdir. Günümüzde hem etnografik eserlerin sergilendiği bir müze hem de şehrin milli mücadele hatırasını yaşatan önemli bir mirastır.</p>
+            <!-- Sakarya Müzesi -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="img/sakarya_müzesi.jpg" class="card-img-top" alt="Sakarya Müzesi">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Sakarya Müzesi (Atatürk Evi)</h5>
+                        <p class="card-text">1910 yılında inşa edilen bu tarihi konak, Kurtuluş Savaşı sırasında Atatürk'ün annesiyle konakladığı yerdir. Günümüzde hem etnografik eserlerin sergilendiği bir müze hem de şehrin milli mücadele hatırasını yaşatan önemli bir mirastır.</p>
+                    </div>
                 </div>
-                <div class="card-footer bg-transparent border-0">
-                    <small class="text-muted">Konum: Adapazarı Merkez</small>
+            </div>
+
+            <!-- Taraklı Evleri -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="img/taraklı.jpg" class="card-img-top" alt="Taraklı Evleri">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Taraklı Evleri</h5>
+                        <p class="card-text">Osmanlı sivil mimarisini günümüze taşıyan tarihi konakları ile Taraklı, şehrimizin yaşayan bir mirasıdır. Tarihi dokusu bozulmamış sakin bir ilçedir.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Eğitim geçmişim -->
     <section id="ozgecmis" class="py-5 border-top bg-light">

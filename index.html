@@ -162,6 +162,85 @@
             <p>GitHub: <a href="https://github.com/aauyar5454" target="_blank">github.com/aauyar5454</a></p>
         </article>
     </section>
+    
+     <!-- İletişim bölümü  -->
+    <section id="iletisim" class="py-5 border-top">
+        <h2>İletişim</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <form id="contactForm" action="gonder.php" method="POST" class="shadow p-4 rounded bg-white">
+                    
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Ad Soyad</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Adınızı giriniz">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-posta Adresi</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="örnek@gmail.com">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Telefon Numarası</label>
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Sadece rakam giriniz">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Mesaj Konusu</label>
+                        <select class="form-select" id="subject" name="subject">
+                            <option value="">Seçiniz...</option>
+                            <option value="bilgi">Bilgi Almak İstiyorum</option>
+                            <option value="proje">Proje Hakkında</option>
+                            <option value="diger">Diğer</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label d-block">Cinsiyet</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="erkek" value="erkek">
+                            <label class="form-check-label" for="erkek">Erkek</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="kadin" value="kadin">
+                            <label class="form-check-label" for="kadin">Kadın</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label d-block">İlgi Duyduğunuz Teknolojiler</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="interest[]" id="web" value="web">
+                            <label class="form-check-label" for="web">Web Teknolojileri</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="interest[]" id="robot" value="robot">
+                            <label class="form-check-label" for="robot">Robotik</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="interest[]" id="ai" value="ai">
+                            <label class="form-check-label" for="ai">Yapay Zeka</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="interest[]" id="3d" value="3d">
+                            <label class="form-check-label" for="3d">3D Tasarım ve Baskı</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mesajınız</label>
+                        <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <button type="button" onclick="validateWithJS()" class="btn btn-primary">JS ile Denetle ve Gönder</button>
+                        <button type="button" id="vueBtn" class="btn btn-success">Vue.js ile Denetle ve Gönder</button>
+                        <button type="reset" class="btn btn-secondary">Temizle</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <footer class="py-3 text-center border-top">
         <p>2026 - Ahmet Aziz Uyar</p>

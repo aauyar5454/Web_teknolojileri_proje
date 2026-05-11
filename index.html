@@ -163,6 +163,73 @@
         </article>
     </section>
     
+    <section id="ilgi-alanlarim" class="py-5 border-top bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">İlgi Alanlarım: Futbol Dünyası</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <p>İstediğiniz Dünya yıldızlarının isimlerini yazarak bilgilerini öğrenin </p>
+                    
+                    <div class="input-group mb-3 shadow-sm">
+                        <input type="text" id="playerName" class="form-control" placeholder="Örn: Lionel Messi, Cristiano Ronaldo, Icardi..." value="Lionel Messi">
+                        <button class="btn btn-success" type="button" onclick="fetchPlayerData()">Futbolcu Ara</button>
+                    </div>
+                    
+                    <div id="apiResult" class="mt-4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function fetchPlayerData() {
+            const playerInput = document.getElementById('playerName').value;
+            const resultDiv = document.getElementById('apiResult');
+
+            if(playerInput === "") {
+                resultDiv.innerHTML = '<div class="alert alert-warning">Lütfen bir futbolcu adı girin!</div>';
+                return;
+            }
+
+            resultDiv.innerHTML = '<div class="spinner-border text-success" role="status"></div><p class="mt-2">Veriler çekiliyor...</p>';
+
+            // TheSportsDB API (Kayıt ve şifre gerektirmez)
+            fetch(`https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=${playerInput}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.player && data.player.length > 0) {
+                        const player = data.player[0]; // İlk eşleşen sonucu al
+                        const imageUrl = player.strThumb ? player.strThumb : 'https://via.placeholder.com/300x300?text=Fotograf+Yok';
+                        
+                        resultDiv.innerHTML = `
+                            <div class="card shadow border-0 mx-auto" style="max-width: 18rem; border-radius: 15px;">
+                                <img src="${imageUrl}" class="card-img-top rounded-top" alt="${player.strPlayer}">
+                                <div class="card-body bg-dark text-white rounded-bottom">
+                                    <h5 class="card-title text-success fw-bold">${player.strPlayer}</h5>
+                                    <ul class="list-unstyled mb-0 text-start">
+                                        <li><strong>Takım:</strong> ${player.strTeam || 'Bilinmiyor'}</li>
+                                        <li><strong>Milli Takım:</strong> ${player.strNationality}</li>
+                                        <li><strong>Mevki:</strong> ${player.strPosition}</li>
+                                        <li><strong>Doğum Tarihi:</strong> ${player.dateBorn || 'Bilinmiyor'}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        resultDiv.innerHTML = '<div class="alert alert-danger shadow-sm">Oyuncu bulunamadı. Lütfen İngilizce karakterlerle veya tam adıyla tekrar deneyin.</div>';
+                    }
+                })
+                .catch(error => {
+                    resultDiv.innerHTML = '<div class="alert alert-danger shadow-sm">API bağlantısında bir hata oluştu!</div>';
+                });
+        }
+
+        // Sayfa yüklendiğinde varsayılan oyuncunun verisini otomatik çeksin
+        document.addEventListener("DOMContentLoaded", function() {
+            fetchPlayerData();
+        });
+    </script>
+
      <!-- İletişim bölümü  -->
     <section id="iletisim" class="py-5 border-top">
         <h2>İletişim</h2>
